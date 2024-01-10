@@ -6,8 +6,60 @@
     <title>Library</title>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/bookshelf.jpg">
 </head>
 <body>
-    
+    <div class="container"> 
+        <div class="header">
+            <div class="title">The Library Of <img class="lib"src="assets/library.png"></div>
+            <div class="name">
+                <span>Zaid Madanat</span> 
+                <a href="https://github.com/ZaidMadanat" target="_blank"><img class="gitlogo" src="assets/github-mark-white.png"></a>
+            </div>
+        </div>
+            <div class="add-book"> 
+                <form action="" method="post">
+                    <div>
+                        <label for="book_name">Book: </label>
+                        <input type="text" id="book_name"/>
+                    </div>
+
+                    <div>
+                        <label for="author">Author: </label>
+                        <input type="text" id="author"/>
+                    </div>
+                    <div>
+                        <label for="pages">Pages: </label>
+                        <input type="number" id="pages"/>
+                    </div>
+                    <div>
+                        <label for="rating">Rating: </label>
+                        <input type="number" id="rating" min="0" max="100"/>
+                    </div>
+                    <div>
+                        <label for="genre">Genre: </label>
+                        <input type="text" id="genre"/>
+                    </div>
+                    <div>
+                        <label for="status">Status: </label>
+                        <input type="text" id="status" placeholder="read or not read" required pattern="[Rr]ead|[Nn]ot [Rr]ead" />
+                    </div>
+                    <div class="result">
+                        <button type="submit">Add Book</button>
+                        <button class="reset" type="reset">Reset</button>
+                    </div>
+                </form>
+                <div class="stats"> 
+                    <p>Statistics</p>
+                    <p>Pages: </p>
+                    <p>Books Read: </p>
+                    <p>Hours Read: </p>
+                    </div>
+            </div>
+            <div class="books"> 
+            </div>
+
+
+    </div>
 </body>
 </html>
