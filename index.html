@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/bookshelf.jpg">
 </head>
@@ -18,7 +18,7 @@
             </div>
         </div>
             <div class="add-book"> 
-                <form action="" method="post">
+                <form id="bookForm" action="" method="post">
                     <div>
                         <label for="book_name">Book: </label>
                         <input type="text" id="book_name"/>
@@ -45,7 +45,7 @@
                         <input type="text" id="status" placeholder="read or not read" required pattern="[Rr]ead|[Nn]ot [Rr]ead" />
                     </div>
                     <div class="result">
-                        <button type="submit">Add Book</button>
+                        <button class="submit" type="submit">Add Book</button>
                         <button class="reset" type="reset">Reset</button>
                     </div>
                 </form>

@@ -75,6 +75,20 @@ button:hover{
 .reset:hover { 
     background-color: red;
 }
+.books { 
+    margin-top: 15px;
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    display: grid; 
+    align-content: space-between;
+}
+.card { 
+    border-radius: 10px;
+    border: solid white;
+    border-radius: 0.5rem;
+    background: #D2B48C;
+    max-width: 200px;
+}
 
 img { 
     width: 35px; 
