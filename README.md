@@ -1,2 +1,1 @@
-Library to add books, mark as read, and remove. 
-Help learn Prototypal Inheritance and Object Constructors.
+Library where books are presented with various detail about them, personalized name for library by hovering over the library image, and statistics to help you see how many pages and books you read, as well as the total time reading.
