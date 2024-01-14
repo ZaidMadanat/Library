@@ -16,6 +16,11 @@ const stat_pages = document.querySelector('.stat-pages');
 const stat_read = document.querySelector('.stat-read');
 const stat_time = document.querySelector('.hours-read');
 
+/* 
+whole script revolves around the submit button, once pressed 
+I add the book to the array, reset the data, and display the book as a "card" 
+I then update the statistics each time.
+*/
 const bookForm = document.getElementById('bookForm')
 bookForm.addEventListener('submit', function(e) { 
     e.preventDefault();
@@ -24,7 +29,7 @@ bookForm.addEventListener('submit', function(e) {
     displayBooks();
     updateStatistics();
 });
-
+// Adding a personalized name to library when pressed
 const nameAdd = document.querySelector('.lib');
 const title = document.querySelector('.title span');
 nameAdd.addEventListener('click', function(e) { 
@@ -32,6 +37,7 @@ nameAdd.addEventListener('click', function(e) {
     title.textContent += name;
 }, {once: true});
 
+// Book Object Constructor
 function Book(title, author, pages, rating, genre, isRead) { 
     this.title = title;
     this.author = author;
@@ -41,10 +47,12 @@ function Book(title, author, pages, rating, genre, isRead) {
     this.isRead = isRead;
 }
 
+
 function addBookToLibrary() { 
     const newBook = new Book(book_name.value, book_author.value, book_pages.value ,book_rating.value ,book_genre.value ,book_status.value);
     myLibrary.push(newBook);
 }
+
 function displayBooks() { 
     const booksContainer = document.querySelector('.books');
     const bookCard = document.createElement('div');
@@ -76,6 +84,7 @@ function updateStatistics() {
     stat_time.textContent += "Total Time: " + total_hours + " hours " + total_minutes + " minutes";
 }
 
+//Clearing the stats after each update. 
 function clearStats() { 
     stat_pages.textContent = "";
     stat_read.textContent = "";
